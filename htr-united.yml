@@ -2,27 +2,27 @@ schema: https://htr-united.github.io/schema/2022-04-15/schema.json
 title: Peraire Ground Truth
 url: https://github.com/alix-tz/peraire-ground-truth
 authors:
-  - name: Alix
-    surname: Chagué
-    orcid: 0000-0002-0136-4434
-    roles:
-      - transcriber
-      - quality-control
-  - name: Pascal
-    surname: Dubourg Glatigny
-    roles:
-      - project-manager
+- name: Alix
+  surname: "Chagu\xE9"
+  orcid: 0000-0002-0136-4434
+  roles:
+  - transcriber
+  - quality-control
+- name: Pascal
+  surname: Dubourg Glatigny
+  roles:
+  - project-manager
 institutions:
-  - name: Azentis
-    roles:
-      - digitization
+- name: Azentis
+  roles:
+  - digitization
 description: Ground Truth for the Digital Peraire project.
 project-name: Digital Peraire
 language:
-  - fra
+- fra
 production-software: eScriptorium + Kraken
 script:
-  - iso: Latn
+- iso: Latn
 script-type: only-manuscript
 time:
   notBefore: '1928'
@@ -31,15 +31,20 @@ hands:
   count: '1'
   precision: exact
 license:
-  - name: CC-BY 4.0
-    url: https://creativecommons.org/licenses/by/4.0/
+- name: CC-BY 4.0
+  url: https://creativecommons.org/licenses/by/4.0/
 format: Alto-XML
 volume:
-  - metric: files
-    count: 33
-transcription-guidelines: >-
-  Les mots barrés sont transcrits par "><". Les textes suscrits ne sont pas
-  signalés. Ce qui est écrit est transcrits. S'il y a des incertitutes, la ligne
-  est laissée vide. La segmentation de certains documents ne convient pas pour
-  l'entraînement d'un modèle de segmentation. L'ontologie SegmOnto a été
-  utilisée. 
+- metric: characters
+  count: 38400
+- metric: files
+  count: 33
+- metric: lines
+  count: 1059
+- metric: regions
+  count: 81
+transcription-guidelines: "Les mots barr\xE9s sont transcrits par \"><\". Les textes\
+  \ suscrits ne sont pas signal\xE9s. Ce qui est \xE9crit est transcrits. S'il y a\
+  \ des incertitutes, la ligne est laiss\xE9e vide. La segmentation de certains documents\
+  \ ne convient pas pour l'entra\xEEnement d'un mod\xE8le de segmentation. L'ontologie\
+  \ SegmOnto a \xE9t\xE9 utilis\xE9e. "
