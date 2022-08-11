@@ -181,7 +181,7 @@
           
           
           <TextLine ID="eSc_line_5f73865b"
-                    
+                    TAGREFS="LT1364"
                     BASELINE="1082 866 1167 853" 
                     HPOS="1069"
                     VPOS="803"
@@ -289,7 +289,7 @@
                     VPOS="1624"
                     WIDTH="102"
                     HEIGHT="76">
-            <Shape><Polygon POINTS="2250 1686 2250 1700 2341 1693 2341 1671 2327 1624 2239 1631 2250 1686"/></Shape>
+            <Shape><Polygon POINTS="2250 1700 2341 1693 2341 1671 2327 1624 2239 1631 2250 1686"/></Shape>
 	    <String CONTENT="c"
                     HPOS="2239"
                     VPOS="1624"
@@ -555,7 +555,7 @@
           
           
           <TextLine ID="eSc_line_342fc09b"
-                    
+                    TAGREFS="LT1364"
                     BASELINE="2656 3183 2846 3180" 
                     HPOS="2654"
                     VPOS="3110"
@@ -572,7 +572,7 @@
           
           
           <TextLine ID="eSc_line_8cd03479"
-                    
+                    TAGREFS="LT1364"
                     BASELINE="2859 3180 3134 3176" 
                     HPOS="2850"
                     VPOS="3081"

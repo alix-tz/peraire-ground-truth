@@ -324,18 +324,18 @@
           
           
           <TextLine ID="eSc_line_117593be"
-                    
-                    BASELINE="2052 2587 2224 2578" 
+                    TAGREFS="LT1365"
+                    BASELINE="2052 2587 2224 2572" 
                     HPOS="2042"
-                    VPOS="2502"
+                    VPOS="2498"
                     WIDTH="178"
-                    HEIGHT="102">
-            <Shape><Polygon POINTS="2049 2586 2049 2604 2220 2604 2220 2575 2209 2502 2042 2517 2049 2586"/></Shape>
+                    HEIGHT="95">
+            <Shape><Polygon POINTS="2049 2586 2049 2593 2220 2582 2220 2571 2209 2498 2042 2517 2049 2586"/></Shape>
 	    <String CONTENT="c&#39;est"
                     HPOS="2042"
-                    VPOS="2502"
+                    VPOS="2498"
                     WIDTH="178"
-                    HEIGHT="102"></String>
+                    HEIGHT="95"></String>
           </TextLine>
 
           

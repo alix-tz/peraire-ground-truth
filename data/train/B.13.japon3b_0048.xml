@@ -188,13 +188,13 @@
           
           
           <TextLine ID="eSc_line_f97a2607"
-                    
+                    TAGREFS="LT1365"
                     BASELINE="2620 1370 2746 1370" 
                     HPOS="2619"
                     VPOS="1305"
                     WIDTH="124"
                     HEIGHT="99">
-            <Shape><Polygon POINTS="2619 1367 2619 1393 2739 1404 2743 1367 2739 1305 2619 1305 2619 1367"/></Shape>
+            <Shape><Polygon POINTS="2619 1393 2739 1404 2743 1367 2739 1305 2619 1305 2619 1367"/></Shape>
 	    <String CONTENT="n&#39;"
                     HPOS="2619"
                     VPOS="1305"

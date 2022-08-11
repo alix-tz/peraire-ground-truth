@@ -410,17 +410,17 @@
           
           <TextLine ID="eSc_line_a4cea084"
                     TAGREFS="LT1365"
-                    BASELINE="1284 3535 1441 3528" 
+                    BASELINE="1284 3529 1441 3528" 
                     HPOS="1277"
-                    VPOS="3451"
-                    WIDTH="164"
-                    HEIGHT="117">
-            <Shape><Polygon POINTS="1284 3568 1441 3553 1441 3528 1434 3455 1277 3451 1284 3535"/></Shape>
+                    VPOS="3459"
+                    WIDTH="160"
+                    HEIGHT="109">
+            <Shape><Polygon POINTS="1281 3528 1281 3568 1437 3550 1437 3524 1430 3459 1277 3459 1281 3528"/></Shape>
 	    <String CONTENT="haut"
                     HPOS="1277"
-                    VPOS="3451"
-                    WIDTH="164"
-                    HEIGHT="117"></String>
+                    VPOS="3459"
+                    WIDTH="160"
+                    HEIGHT="109"></String>
           </TextLine>
 
           
