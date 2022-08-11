@@ -42,7 +42,7 @@ volume:
 - metric: lines
   count: 1059
 - metric: regions
-  count: 81
+  count: 80
 transcription-guidelines: "Les mots barr\xE9s sont transcrits par \"><\". Les textes\
   \ suscrits ne sont pas signal\xE9s. Ce qui est \xE9crit est transcrits. S'il y a\
   \ des incertitutes, la ligne est laiss\xE9e vide. La segmentation de certains documents\
