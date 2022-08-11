@@ -1,6 +1,8 @@
 Peraire Ground Truth
 =====================
 
+![characters badge](badges/characters.svg) ![regions badge](badges/regions.svg) ![lines badge](badges/lines.svg) ![files badge](badges/files.svg) 
+
 <!--
 **You can delete the following three paragraphs, they are just there to explain what's going on**
 
