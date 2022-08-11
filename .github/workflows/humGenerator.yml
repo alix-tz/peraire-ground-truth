@@ -20,7 +20,7 @@ jobs:
         pip install htr-united-metadata-generator htruc
     - name: Run Report
       run: |
-        humGenerator --group ./data/**/*.xml --github-envs --to-json updated_metrics.json
+        humGenerator --group ./data/train/*.xml --github-envs --to-json updated_metrics.json
         cat envs.txt >> $GITHUB_ENV
     - name: Automatically update the catalog's volume key
       run: |
