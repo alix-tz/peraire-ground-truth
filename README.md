@@ -1,6 +1,8 @@
 Peraire Ground Truth
 =====================
 
+[![DOI](https://zenodo.org/badge/523701721.svg)](https://zenodo.org/badge/latestdoi/523701721)
+
 ![characters badge](badges/characters.svg) ![regions badge](badges/regions.svg) ![lines badge](badges/lines.svg) ![files badge](badges/files.svg) 
 
 ## License
