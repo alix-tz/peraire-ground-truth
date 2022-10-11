@@ -7,6 +7,12 @@ Peraire Ground Truth
 
 This dataset and model are published under the CC-BY 4.0 License.
 
+To cite this dataset:
+
+```
+Chagué, A. (2022). Peraire Ground Truth (Version 1.0.0) [Dataset]. https://github.com/alix-tz/peraire-ground-truth
+```
+
 ## Description
 
 This dataset was created in order to produce an HTR model for the Digital Peraire project. The documents are handwritten, dating from the second half of the 20th century, written in French with a blue ink pen or, more frequently, with a blue pencil. Occasional marginal notes appear in red. 
