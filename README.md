@@ -59,3 +59,14 @@ The original documents are held at the Bibliothèque Sébert, Espéranto-France,
 
 See the [models' README](https://github.com/alix-tz/peraire-ground-truth/blob/master/models/readme.md) for more information about the training of the model. 
 
+<!--
+
+## Trainset preparation
+
+With Kraken 4.1.2.
+
+```
+ketos compile --random-split 0.8 0.1 0.1 -f xml -o train.arrow $PWD/../data/train/*.xml
+```
+
+-->
