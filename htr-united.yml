@@ -1,145 +1,159 @@
-schema: https://htr-united.github.io/schema/2022-04-15/schema.json
-title: Peraire Ground Truth
-url: https://github.com/alix-tz/peraire-ground-truth
 authors:
 - name: Alix
-  surname: "Chagu\xE9"
   orcid: 0000-0002-0136-4434
   roles:
   - transcriber
   - aligner
   - quality-control
+  surname: Chagué
 - name: Pascal
-  surname: Dubourg Glatigny
   roles:
   - project-manager
+  surname: Dubourg Glatigny
 - name: Gilles
-  surname: Pérez
   roles:
   - transcriber
-institutions:
-- name: Azentis
-  roles:
-  - digitization
-description: Ground Truth for the Digital Peraire project.
-project-name: Digital Peraire
-language:
-- fra
-production-software: eScriptorium + Kraken
-script:
-- iso: Latn
-script-type: only-manuscript
-time:
-  notBefore: '1928'
-  notAfter: '1990'
-hands:
-  count: '1'
-  precision: exact
-license:
-- name: CC-BY 4.0
-  url: https://creativecommons.org/licenses/by/4.0/
-format: Alto-XML
-volume:
-- metric: characters
-  count: 38793
-- metric: files
-  count: 33
-- metric: lines
-  count: 1059
-- metric: regions
-  count: 80
-transcription-guidelines: "Les mots barr\xE9s sont transcrits par \"><\". Les textes\
-  \ suscrits ne sont pas signal\xE9s. Ce qui est \xE9crit est transcrits. S'il y a\
-  \ des incertitutes, la ligne est laiss\xE9e vide. La segmentation de certains documents\
-  \ ne convient pas pour l'entra\xEEnement d'un mod\xE8le de segmentation. L'ontologie\
-  \ SegmOnto a \xE9t\xE9 utilis\xE9e. Quand les mots ajoutés sont insérés par un '⋎', ce graphème est transcrit par un ⋎."
+  surname: Pérez
 characters:
-  mode: NFD
   members:
   - e
   - s
   - a
+  - t
   - n
   - i
-  - t
   - r
   - u
   - o
   - l
   - d
   - m
-  - p
   - c
-  - ','
-  - v
-  - "\u0301"
-  - .
-  - f
-  - g
-  - ''''
-  - q
-  - b
-  - h
-  - "\u0300"
-  - j
+  - p
   - E
+  - ','
+  - ́
+  - .
+  - v
   - A
-  - '-'
-  - N
-  - '1'
-  - S
-  - C
-  - x
-  - T
+  - f
   - I
-  - O
-  - y
-  - L
-  - "\u0302"
-  - '"'
+  - S
+  - N
+  - g
+  - q
   - R
-  - '2'
+  - T
+  - O
+  - ̀
+  - b
+  - L
+  - h
+  - '-'
+  - ’
   - U
+  - C
+  - j
+  - '1'
   - D
   - M
+  - "'"
   - P
-  - '0'
-  - '3'
-  - '4'
-  - H
-  - ':'
-  - '9'
-  - J
-  - (
-  - )
-  - '5'
-  - "\u0327"
-  - z
-  - '7'
+  - '"'
+  - x
+  - '2'
+  - ̂
   - V
+  - y
+  - H
+  - '3'
+  - J
+  - '9'
+  - '4'
   - B
-  - ;
-  - K
-  - '?'
-  - k
-  - '6'
-  - F
-  - Q
   - G
-  - '8'
-  - "\xB0"
-  - /
-  - Y
-  - '#'
-  - '!'
-  - '='
-  - Z
+  - (
+  - F
+  - '0'
+  - )
+  - K
+  - '7'
+  - '5'
   - ']'
-  - "\u0308"
-  - X
-  - "\u2192"
+  - '?'
+  - '8'
+  - ':'
   - '['
-  - '*'
-  - w
-  - '%'
+  - '6'
+  - Q
+  - ̧
+  - z
+  - –
+  - k
+  - Y
+  - /
+  - ;
+  - Z
+  - X
+  - °
+  - ^
+  - '>'
+  - <
+  - '='
+  - ⋎
+  - →
+  - ̈
+  - '!'
+  - …
   - '{'
+  - '#'
+  - œ
+  - w
+  - —
+  - W
+  - +
+  - ̆
+  - '*'
+  - '%'
+  - '~'
+  mode: NFD
+description: Ground Truth for the Digital Peraire project.
+format: Alto-XML
+hands:
+  count: '1'
+  precision: exact
+institutions:
+- name: Azentis
+  roles:
+  - digitization
+language:
+- fra
+license:
+- name: CC-BY 4.0
+  url: https://creativecommons.org/licenses/by/4.0/
+production-software: eScriptorium + Kraken
+project-name: Digital Peraire
+schema: https://htr-united.github.io/schema/2022-04-15/schema.json
+script:
+- iso: Latn
+script-type: only-manuscript
+time:
+  notAfter: '1990'
+  notBefore: '1928'
+title: Peraire Ground Truth
+transcription-guidelines: Les mots barrés sont transcrits par "><". Les textes suscrits
+  ne sont pas signalés. Ce qui est écrit est transcrits. S'il y a des incertitutes,
+  la ligne est laissée vide. La segmentation de certains documents ne convient pas
+  pour l'entraînement d'un modèle de segmentation. L'ontologie SegmOnto a été utilisée.
+  Quand les mots ajoutés sont insérés par un '⋎', ce graphème est transcrit par un
+  ⋎.
+url: https://github.com/alix-tz/peraire-ground-truth
+volume:
+- count: 97513
+  metric: characters
+- count: 67
+  metric: files
+- count: 2307
+  metric: lines
+- count: 151
+  metric: regions
