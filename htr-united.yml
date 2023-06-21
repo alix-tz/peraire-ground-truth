@@ -7,11 +7,16 @@ authors:
   orcid: 0000-0002-0136-4434
   roles:
   - transcriber
+  - aligner
   - quality-control
 - name: Pascal
   surname: Dubourg Glatigny
   roles:
   - project-manager
+- name: Gilles
+  surname: Pérez
+  roles:
+  - transcriber
 institutions:
 - name: Azentis
   roles:
@@ -26,7 +31,7 @@ script:
 script-type: only-manuscript
 time:
   notBefore: '1928'
-  notAfter: '1971'
+  notAfter: '1990'
 hands:
   count: '1'
   precision: exact
@@ -47,7 +52,7 @@ transcription-guidelines: "Les mots barr\xE9s sont transcrits par \"><\". Les te
   \ suscrits ne sont pas signal\xE9s. Ce qui est \xE9crit est transcrits. S'il y a\
   \ des incertitutes, la ligne est laiss\xE9e vide. La segmentation de certains documents\
   \ ne convient pas pour l'entra\xEEnement d'un mod\xE8le de segmentation. L'ontologie\
-  \ SegmOnto a \xE9t\xE9 utilis\xE9e. "
+  \ SegmOnto a \xE9t\xE9 utilis\xE9e. Quand les mots ajoutés sont insérés par un '⋎', ce graphème est transcrit par un ⋎."
 characters:
   mode: NFD
   members:
