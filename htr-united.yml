@@ -37,6 +37,7 @@ characters:
   - v
   - A
   - f
+  - ’
   - I
   - S
   - N
@@ -46,18 +47,16 @@ characters:
   - T
   - O
   - ̀
+  - '-'
   - b
   - L
   - h
-  - '-'
-  - ’
   - U
   - C
   - j
   - '1'
   - D
   - M
-  - "'"
   - P
   - '"'
   - x
@@ -88,7 +87,6 @@ characters:
   - Q
   - ̧
   - z
-  - –
   - k
   - Y
   - /
@@ -96,25 +94,22 @@ characters:
   - Z
   - X
   - °
+  - '#'
   - ^
-  - '>'
-  - <
   - '='
   - ⋎
   - →
   - ̈
   - '!'
-  - …
   - '{'
-  - '#'
-  - œ
   - w
-  - —
   - W
   - +
   - ̆
   - '*'
   - '%'
+  - '>'
+  - <
   - '~'
   mode: NFD
 description: Ground Truth for the Digital Peraire project.
@@ -149,7 +144,7 @@ transcription-guidelines: Les mots barrés sont transcrits par "><". Les textes 
   ⋎.
 url: https://github.com/alix-tz/peraire-ground-truth
 volume:
-- count: 97513
+- count: 97505
   metric: characters
 - count: 67
   metric: files
