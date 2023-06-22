@@ -12,7 +12,7 @@ This dataset and model are published under the CC-BY 4.0 License.
 To cite this dataset:
 
 ```
-Chagué, A. (2022). Peraire Ground Truth (Version 1.0.0) [Dataset]. https://github.com/alix-tz/peraire-ground-truth
+Chagué, A., & Pérez, G. (2023). Peraire Ground Truth (Version 2.0.0) [Data set]. https://doi.org/10.5281/zenodo.7185907
 ```
 
 ## Description
