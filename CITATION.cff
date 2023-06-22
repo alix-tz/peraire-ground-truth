@@ -4,8 +4,10 @@ authors:
 - family-names: "Chagué"
   given-names: "Alix"
   orcid: "https://orcid.org/0000-0002-0136-4434"
+- family-names: "Pérez"
+  given-names: "Gilles"
 title: "Peraire Ground Truth"
-version: 1.0.0
+version: 2.0.0
 doi: 10.5281/zenodo.7185907  
 date-released: 2022-10-11
 url: "https://github.com/alix-tz/peraire-ground-truth"
