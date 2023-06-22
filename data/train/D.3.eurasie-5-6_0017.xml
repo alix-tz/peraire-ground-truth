@@ -11,14 +11,14 @@
   </Description>
   
   <Tags>
-    <OtherTag ID="BT7525" LABEL="MarginTextZone" DESCRIPTION="block type MarginTextZone"/><OtherTag ID="BT7524" LABEL="NumberingZone" DESCRIPTION="block type NumberingZone"/><OtherTag ID="BT7523" LABEL="MainZone" DESCRIPTION="block type MainZone"/>
-    <OtherTag ID="LT2526" LABEL="InterlinearLine" DESCRIPTION="line type InterlinearLine"/><OtherTag ID="LT2525" LABEL="DefaultLine" DESCRIPTION="line type DefaultLine"/>
+    <OtherTag ID="BT7519" LABEL="NumberingZone" DESCRIPTION="block type NumberingZone"/><OtherTag ID="BT7517" LABEL="MainZone" DESCRIPTION="block type MainZone"/>
+    <OtherTag ID="LT2523" LABEL="InterlinearLine" DESCRIPTION="line type InterlinearLine"/><OtherTag ID="LT2522" LABEL="DefaultLine" DESCRIPTION="line type DefaultLine"/>
   </Tags>
   
   <Layout>
     <Page WIDTH="3046"
           HEIGHT="4825"
-          PHYSICAL_IMG_NR="57"
+          PHYSICAL_IMG_NR="9"
           ID="eSc_dummypage_">
       <PrintSpace HPOS="0"
                   VPOS="0"
@@ -30,12 +30,12 @@
                    WIDTH="2891.0"
                    HEIGHT="4618.0"
                    ID="eSc_textblock_00173af8"
-                   TAGREFS="BT7523">
+                   TAGREFS="BT7517">
           <Shape><Polygon POINTS="96 83 64 4701 2955 4692 2930 538 2931 401 2497 388 2502 110"/></Shape>
           
           
           <TextLine ID="eSc_line_37bdfd80"
-                    TAGREFS="LT2525"
+                    TAGREFS="LT2522"
                     BASELINE="388 217 2260 203" 
                     HPOS="386.0"
                     VPOS="112.0"
@@ -52,7 +52,7 @@
           
           
           <TextLine ID="eSc_line_59e804e1"
-                    TAGREFS="LT2525"
+                    TAGREFS="LT2522"
                     BASELINE="383 375 2228 361" 
                     HPOS="380.0"
                     VPOS="260.0"
@@ -69,7 +69,7 @@
           
           
           <TextLine ID="eSc_line_2b1bb4e2"
-                    TAGREFS="LT2525"
+                    TAGREFS="LT2522"
                     BASELINE="372 514 732 530 2445 517" 
                     HPOS="372.0"
                     VPOS="415.0"
@@ -86,7 +86,7 @@
           
           
           <TextLine ID="eSc_line_0f7315ee"
-                    TAGREFS="LT2525"
+                    TAGREFS="LT2522"
                     BASELINE="179 772 2801 761" 
                     HPOS="176.0"
                     VPOS="694.0"
@@ -103,7 +103,7 @@
           
           
           <TextLine ID="eSc_line_21219af5"
-                    TAGREFS="LT2525"
+                    TAGREFS="LT2522"
                     BASELINE="179 927 2777 911" 
                     HPOS="176.0"
                     VPOS="849.0"
@@ -120,7 +120,7 @@
           
           
           <TextLine ID="eSc_line_fec35d86"
-                    TAGREFS="LT2525"
+                    TAGREFS="LT2522"
                     BASELINE="179 1082 1496 1077" 
                     HPOS="176.0"
                     VPOS="1010.0"
@@ -137,7 +137,7 @@
           
           
           <TextLine ID="eSc_line_1d7aa432"
-                    TAGREFS="LT2525"
+                    TAGREFS="LT2522"
                     BASELINE="1085 1225 1405 1235" 
                     HPOS="1083.0"
                     VPOS="1112.0"
@@ -154,7 +154,7 @@
           
           
           <TextLine ID="eSc_line_ce5b2a60"
-                    TAGREFS="LT2525"
+                    TAGREFS="LT2522"
                     BASELINE="959 1393 1455 1391" 
                     HPOS="957.0"
                     VPOS="1297.0"
@@ -171,7 +171,7 @@
           
           
           <TextLine ID="eSc_line_6b2e2804"
-                    TAGREFS="LT2525"
+                    TAGREFS="LT2522"
                     BASELINE="1686 1391 2469 1380" 
                     HPOS="1683.0"
                     VPOS="1294.0"
@@ -188,7 +188,7 @@
           
           
           <TextLine ID="eSc_line_00e7178b"
-                    TAGREFS="LT2525"
+                    TAGREFS="LT2522"
                     BASELINE="445 1557 2860 1533" 
                     HPOS="442.0"
                     VPOS="1439.0"
@@ -205,7 +205,7 @@
           
           
           <TextLine ID="eSc_line_932fb368"
-                    TAGREFS="LT2525"
+                    TAGREFS="LT2522"
                     BASELINE="152 1720 2879 1699" 
                     HPOS="150.0"
                     VPOS="1605.0"
@@ -222,7 +222,7 @@
           
           
           <TextLine ID="eSc_line_ec91d0ac"
-                    TAGREFS="LT2525"
+                    TAGREFS="LT2522"
                     BASELINE="152 1879 809 1862 2895 1852" 
                     HPOS="150.0"
                     VPOS="1753.0"
@@ -239,7 +239,7 @@
           
           
           <TextLine ID="eSc_line_5e41d4c2"
-                    TAGREFS="LT2525"
+                    TAGREFS="LT2522"
                     BASELINE="150 2031 2743 2005" 
                     HPOS="150.0"
                     VPOS="1929.0"
@@ -256,7 +256,7 @@
           
           
           <TextLine ID="eSc_line_03a73ab4"
-                    TAGREFS="LT2525"
+                    TAGREFS="LT2522"
                     BASELINE="147 2181 2826 2165" 
                     HPOS="144.0"
                     VPOS="2085.0"
@@ -273,7 +273,7 @@
           
           
           <TextLine ID="eSc_line_721c7aa4"
-                    TAGREFS="LT2525"
+                    TAGREFS="LT2522"
                     BASELINE="163 2342 2225 2332" 
                     HPOS="160.0"
                     VPOS="2224.0"
@@ -290,7 +290,7 @@
           
           
           <TextLine ID="eSc_line_7bfc57e1"
-                    TAGREFS="LT2525"
+                    TAGREFS="LT2522"
                     BASELINE="482 2498 1056 2484 2780 2484" 
                     HPOS="479.0"
                     VPOS="2391.0"
@@ -307,7 +307,7 @@
           
           
           <TextLine ID="eSc_line_5e4e32c9"
-                    TAGREFS="LT2525"
+                    TAGREFS="LT2522"
                     BASELINE="150 2659 1305 2643 2914 2637" 
                     HPOS="147.0"
                     VPOS="2554.0"
@@ -324,7 +324,7 @@
           
           
           <TextLine ID="eSc_line_7e78124c"
-                    TAGREFS="LT2525"
+                    TAGREFS="LT2522"
                     BASELINE="152 2811 1823 2798 2772 2803" 
                     HPOS="150.0"
                     VPOS="2702.0"
@@ -341,7 +341,7 @@
           
           
           <TextLine ID="eSc_line_215e3070"
-                    TAGREFS="LT2525"
+                    TAGREFS="LT2522"
                     BASELINE="142 2970 1410 2956 2823 2959" 
                     HPOS="139.0"
                     VPOS="2868.0"
@@ -358,7 +358,7 @@
           
           
           <TextLine ID="eSc_line_a2c0def0"
-                    TAGREFS="LT2525"
+                    TAGREFS="LT2522"
                     BASELINE="147 3122 2767 3112" 
                     HPOS="144.0"
                     VPOS="3023.0"
@@ -375,7 +375,7 @@
           
           
           <TextLine ID="eSc_line_20b93e3d"
-                    TAGREFS="LT2525"
+                    TAGREFS="LT2522"
                     BASELINE="144 3291 2807 3264" 
                     HPOS="142.0"
                     VPOS="3173.0"
@@ -392,7 +392,7 @@
           
           
           <TextLine ID="eSc_line_0a165ee2"
-                    TAGREFS="LT2526"
+                    TAGREFS="LT2523"
                     BASELINE="2407 3205 2504 3198" 
                     HPOS="2398.0"
                     VPOS="3132.0"
@@ -409,7 +409,7 @@
           
           
           <TextLine ID="eSc_line_fe2d6e2a"
-                    TAGREFS="LT2525"
+                    TAGREFS="LT2522"
                     BASELINE="144 3447 737 3433 2611 3425" 
                     HPOS="142.0"
                     VPOS="3326.0"
@@ -426,7 +426,7 @@
           
           
           <TextLine ID="eSc_line_9b7f5d8a"
-                    TAGREFS="LT2525"
+                    TAGREFS="LT2522"
                     BASELINE="388 3597 2718 3586" 
                     HPOS="386.0"
                     VPOS="3487.0"
@@ -443,7 +443,7 @@
           
           
           <TextLine ID="eSc_line_b85670c3"
-                    TAGREFS="LT2525"
+                    TAGREFS="LT2522"
                     BASELINE="163 3763 2879 3736" 
                     HPOS="160.0"
                     VPOS="3632.0"
@@ -460,7 +460,7 @@
           
           
           <TextLine ID="eSc_line_3b05d604"
-                    TAGREFS="LT2525"
+                    TAGREFS="LT2522"
                     BASELINE="152 3905 681 3913 2855 3892" 
                     HPOS="152.0"
                     VPOS="3811.0"
@@ -477,7 +477,7 @@
           
           
           <TextLine ID="eSc_line_09b23a9b"
-                    TAGREFS="LT2525"
+                    TAGREFS="LT2522"
                     BASELINE="160 4071 2828 4058" 
                     HPOS="158.0"
                     VPOS="3959.0"
@@ -494,7 +494,7 @@
           
           
           <TextLine ID="eSc_line_a6520c28"
-                    TAGREFS="LT2525"
+                    TAGREFS="LT2522"
                     BASELINE="147 4227 2625 4213" 
                     HPOS="144.0"
                     VPOS="4141.0"
@@ -511,7 +511,7 @@
           
           
           <TextLine ID="eSc_line_dde1e335"
-                    TAGREFS="LT2525"
+                    TAGREFS="LT2522"
                     BASELINE="498 4385 2917 4377" 
                     HPOS="496.0"
                     VPOS="4278.0"
@@ -528,7 +528,7 @@
           
           
           <TextLine ID="eSc_line_9dcbd684"
-                    TAGREFS="LT2525"
+                    TAGREFS="LT2522"
                     BASELINE="150 4540 2895 4532" 
                     HPOS="147.0"
                     VPOS="4444.0"
@@ -550,12 +550,12 @@
                    WIDTH="245.0"
                    HEIGHT="186.0"
                    ID="eSc_textblock_340c372b"
-                   TAGREFS="BT7524">
+                   TAGREFS="BT7519">
           <Shape><Polygon POINTS="2765 170 2765 356 2520 356 2520 170"/></Shape>
           
           
           <TextLine ID="eSc_line_69828be8"
-                    TAGREFS="LT2525"
+                    TAGREFS="LT2522"
                     BASELINE="2568 300 2686 300" 
                     HPOS="2568.0"
                     VPOS="206.0"
