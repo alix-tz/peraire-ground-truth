@@ -23,15 +23,19 @@ This dataset was created in order to produce an HTR model for the Digital Perair
 
 The transcription respects what is written on the document, including ponctuation and spelling errors. 
 
-![image](https://user-images.githubusercontent.com/33317799/195112502-5a667927-654f-4bef-9877-792915351ab3.png)
+![image](./assets/img/guidelines_spelling.png)
 
 The case is respected: capital letters are transcribed with capital letters.
 
-![image](https://user-images.githubusercontent.com/33317799/195112677-32b18440-f669-4802-83e1-ab61f19902ea.png)
+![image](./assets/img/guidelines_capitals.png)
 
 Crossed out words are signaled by `#` which isn't used to transcribe anything else.
 
-![image](https://user-images.githubusercontent.com/33317799/195113809-5c5bcc36-2da4-4114-b46a-5ddc0d01480e.png)
+![image](./assets/img/guidelines_crossed.png)
+
+When a "v"-like sign is used to signal an insertion, it is transcribed with the character `⋎`.
+
+![image](./assets/img/guidelines_insertions.png)
 
 ## Segmentation guidelines
 
@@ -41,7 +45,7 @@ For regions, `MainZone` and `MarginTextZone` were used. For lines, `DefaultLine`
 
 | Regions | Lines |
 | :-----: | :---: |
-| ![image](https://user-images.githubusercontent.com/33317799/195114722-222dfd08-7fba-4943-a86d-dc73aeab26bf.png) | ![image](https://user-images.githubusercontent.com/33317799/195115222-b71aa830-abcf-42c7-9259-03468a821b31.png) |
+| ![visualizing the types of regions](./assets/img/segmonto_zones.png) | ![visualizing the type of lines](./assets/img/segmonto_lines.png) |
 
 **Warning:** Since the main goal of this dataset was to produce ground truth for the transcription phase, and given how faded the text is on some pages, it is not recomended to use the following images to train a segmentation model:
 
