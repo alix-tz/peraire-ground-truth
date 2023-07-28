@@ -1,7 +1,30 @@
-`Peraire_ft_MMCFR` was trained finetuning the `Manu McFrench` model with the data stored in data/train/ using the eScriptorium web application and Kraken v. 3.0.13.
+# Description of the models
 
+All models were trained using `Manu McFrench` (doi: [10.5281/zenodo.6657808](https://doi.org/10.5281/zenodo.6657808)) as a base model, using data from the [data/train/](../data/train).
+
+- `Peraire_ft_MMCFR` was trained and tested using [peraire-ground-truth v.1.0.0](https://github.com/alix-tz/peraire-ground-truth/releases/tag/v1.0.0), the eScriptorium web application and Kraken v. 3.0.13. This is equivalent to consider that it was trained and tested solely on the transcriptions from the B series.
+- `peraire2_ft_MMCFR` was trained using [peraire-ground-truth v.2.0.0](https://github.com/alix-tz/peraire-ground-truth/releases/tag/v2.0.0) and Kraken v. 4.3.7. :star:
+- `peraireB_ft_MMCFR` was trained using only the transcriptions from the B series of [peraire-ground-truth v.2.0.0](https://github.com/alix-tz/peraire-ground-truth/releases/tag/v2.0.0) and Kraken v. 4.3.7.
+- `peraireD_ft_MMCFR` was trained using only the transcriptions from the D series of [peraire-ground-truth v.2.0.0](https://github.com/alix-tz/peraire-ground-truth/releases/tag/v2.0.0) and Kraken v. 4.3.7.
+
+
+| model             | dataset version | trained on   | tested on   | testing software                                                             | accuracy on test set |
+|:-----------------:|-----------------|--------------|-------------|------------------------------------------------------------------------------|----------------------|
+| Peraire_ft_MMCFR  | 1.0.0           | train/*.xml  | test/*.xml  | [Kamilib 0.1.1 via KamiApp](https://huggingface.co/spaces/lterriel/kami-app) | 93.30 %              |
+| peraire2_ft_MMCFR | 2.0.0           | train/*.xml  | test/*.xml  | [CERberus 1.0.0](https://github.com/WHaverals/CERberus)                      | 95.38 %              |
+| "                 | 2.0.0           | train/*.xml  | test/B*.xml | [CERberus 1.0.0](https://github.com/WHaverals/CERberus)                      | 93.59 %              |
+| "                 | 2.0.0           | train/*.xml  | test/D*.xml | [CERberus 1.0.0](https://github.com/WHaverals/CERberus)                      | 96.46 %              |
+| peraireB_ft_MMCFR | 2.0.0           | train/B*.xml | test/B*.xml | [CERberus 1.0.0](https://github.com/WHaverals/CERberus)                      | 92.88 %              |
+| "                 | 2.0.0           | train/B*.xml | test/D*.xml | [CERberus 1.0.0](https://github.com/WHaverals/CERberus)                      | 90.31 %              |
+| peraireD_ft_MMCFR | 2.0.0           | train/D*.xml | test/*.xml  | [CERberus 1.0.0](https://github.com/WHaverals/CERberus)                      | 96.01 %              |
+| "                 | 2.0.0           | train/D*.xml | test/B*.xml | [CERberus 1.0.0](https://github.com/WHaverals/CERberus)                      | 61.47 %              |
+
+
+<!--
 
 `Peraire_ft_MMCFR` accuracy during training is 93.0%. It reaches an accuracy of 93.3% in the test files.
+
+
 
 ## KaMI-App evaluation
 
@@ -266,3 +289,4 @@ En ce moment, le "chateau" est occupe par
 uune cotonie de SEEPRIEORNI - anciens enfants
 43
 ```
+-->
