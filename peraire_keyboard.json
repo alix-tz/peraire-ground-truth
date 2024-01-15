@@ -1,0 +1,109 @@
+{
+    "version": "0.1",
+    "name": "Peraire keyboard",
+    "author": "",
+    "characters": [
+        {
+            "row": 0,
+            "column": 0,
+            "legend": "signe d'insertion",
+            "character": "⋎"
+        },
+        {
+            "row": 0,
+            "column": 1,
+            "legend": "début de rature",
+            "character": "⟦"
+        },
+        {
+            "row": 0,
+            "column": 2,
+            "legend": "fin de rature",
+            "character": "⟧"
+        },
+        {
+            "row": 0,
+            "column": 3,
+            "legend": "rature illisible",
+            "character": "⟦⟧"
+        },
+        {
+            "row": 0,
+            "column": 4,
+            "legend": "flèche vers la droite",
+            "character": "→"
+        },
+        {
+            "row": 1,
+            "column": 0,
+            "legend": "ĉ minuscule",
+            "character": "ĉ"
+        },
+        {
+            "row": 1,
+            "column": 1,
+            "legend": "ĝ minuscule",
+            "character": "ĝ"
+        },
+        {
+            "row": 1,
+            "column": 2,
+            "legend": "ĥ minuscule",
+            "character": "ĥ"
+        },
+        {
+            "row": 1,
+            "column": 3,
+            "legend": "ĵ minuscule",
+            "character": "ĵ"
+        },
+        {
+            "row": 1,
+            "column": 4,
+            "legend": "ŝ minuscule",
+            "character": "ŝ"
+        },
+        {
+            "row": 1,
+            "column": 5,
+            "legend": "ŭ minuscule",
+            "character": "ŭ"
+        },
+        {
+            "row": 2,
+            "column": 0,
+            "legend": "ĉ majuscule",
+            "character": "Ĉ"
+        },
+        {
+            "row": 2,
+            "column": 1,
+            "legend": "ĝ majuscule",
+            "character": "Ĝ"
+        },
+        {
+            "row": 2,
+            "column": 2,
+            "legend": "ĥ majuscule",
+            "character": "Ĥ"
+        },
+        {
+            "row": 2,
+            "column": 3,
+            "legend": "ĵ majuscule",
+            "character": "Ĵ"
+        },
+        {
+            "row": 2,
+            "column": 4,
+            "legend": "ŝ majuscule",
+            "character": "Ŝ"
+        },
+        {
+            "row": 2,
+            "column": 5,
+            "legend": "ŭ majuscule",
+            "character": "Ŭ"
+        }
+    ]
+}
