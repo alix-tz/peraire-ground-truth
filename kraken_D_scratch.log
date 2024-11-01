@@ -1,0 +1,159 @@
+┏━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃    ┃ Name      ┃ Type                     ┃ Params ┃                 In sizes ┃                Out sizes ┃
+┡━━━━╇━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ 0  │ val_cer   │ _CharErrorRate           │      0 │                        ? │                        ? │
+│ 1  │ val_wer   │ _WordErrorRate           │      0 │                        ? │                        ? │
+│ 2  │ net       │ MultiParamSequential     │  4.0 M │  [[1, 1, 120, 400], '?'] │   [[1, 117, 1, 50], '?'] │
+│ 3  │ net.C_0   │ ActConv2D                │  1.3 K │  [[1, 1, 120, 400], '?'] │ [[1, 32, 120, 400], '?'] │
+│ 4  │ net.Do_1  │ Dropout                  │      0 │ [[1, 32, 120, 400], '?'] │ [[1, 32, 120, 400], '?'] │
+│ 5  │ net.Mp_2  │ MaxPool                  │      0 │ [[1, 32, 120, 400], '?'] │  [[1, 32, 60, 200], '?'] │
+│ 6  │ net.C_3   │ ActConv2D                │ 40.0 K │  [[1, 32, 60, 200], '?'] │  [[1, 32, 60, 200], '?'] │
+│ 7  │ net.Do_4  │ Dropout                  │      0 │  [[1, 32, 60, 200], '?'] │  [[1, 32, 60, 200], '?'] │
+│ 8  │ net.Mp_5  │ MaxPool                  │      0 │  [[1, 32, 60, 200], '?'] │  [[1, 32, 30, 100], '?'] │
+│ 9  │ net.C_6   │ ActConv2D                │ 55.4 K │  [[1, 32, 30, 100], '?'] │  [[1, 64, 30, 100], '?'] │
+│ 10 │ net.Do_7  │ Dropout                  │      0 │  [[1, 64, 30, 100], '?'] │  [[1, 64, 30, 100], '?'] │
+│ 11 │ net.Mp_8  │ MaxPool                  │      0 │  [[1, 64, 30, 100], '?'] │   [[1, 64, 15, 50], '?'] │
+│ 12 │ net.C_9   │ ActConv2D                │  110 K │   [[1, 64, 15, 50], '?'] │   [[1, 64, 15, 50], '?'] │
+│ 13 │ net.Do_10 │ Dropout                  │      0 │   [[1, 64, 15, 50], '?'] │   [[1, 64, 15, 50], '?'] │
+│ 14 │ net.S_11  │ Reshape                  │      0 │   [[1, 64, 15, 50], '?'] │   [[1, 960, 1, 50], '?'] │
+│ 15 │ net.L_12  │ TransposedSummarizingRNN │  1.9 M │   [[1, 960, 1, 50], '?'] │   [[1, 400, 1, 50], '?'] │
+│ 16 │ net.Do_13 │ Dropout                  │      0 │   [[1, 400, 1, 50], '?'] │   [[1, 400, 1, 50], '?'] │
+│ 17 │ net.L_14  │ TransposedSummarizingRNN │  963 K │   [[1, 400, 1, 50], '?'] │   [[1, 400, 1, 50], '?'] │
+│ 18 │ net.Do_15 │ Dropout                  │      0 │   [[1, 400, 1, 50], '?'] │   [[1, 400, 1, 50], '?'] │
+│ 19 │ net.L_16  │ TransposedSummarizingRNN │  963 K │   [[1, 400, 1, 50], '?'] │   [[1, 400, 1, 50], '?'] │
+│ 20 │ net.Do_17 │ Dropout                  │      0 │   [[1, 400, 1, 50], '?'] │   [[1, 400, 1, 50], '?'] │
+│ 21 │ net.O_18  │ LinSoftmax               │ 46.9 K │   [[1, 400, 1, 50], '?'] │   [[1, 117, 1, 50], '?'] │
+└────┴───────────┴──────────────────────────┴────────┴──────────────────────────┴──────────────────────────┘
+Trainable params: 4.0 M                                                                                                                                                                                                                                                                    
+Non-trainable params: 0                                                                                                                                                                                                                                                                    
+Total params: 4.0 M                                                                                                                                                                                                                                                                        
+Total estimated model params size (MB): 16                                                                                                                                                                                                                                                 
+stage 0/∞ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 281/281 0:00:22 • 0:00:00 12.94it/s val_accuracy: 0.0 val_word_accuracy: 0.0  early_stopping: 0/10 0.00000
+stage 1/∞ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 281/281 0:00:22 • 0:00:00 12.85it/s val_accuracy: 0.0 val_word_accuracy: 0.0  early_stopping: 1/10 0.00000
+stage 2/∞ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 281/281 0:00:22 • 0:00:00 13.03it/s val_accuracy: 0.0 val_word_accuracy: 0.0  early_stopping: 2/10 0.00000
+stage 3/∞ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 281/281 0:00:22 • 0:00:00 12.92it/s val_accuracy: 0.0 val_word_accuracy: 0.0  early_stopping: 3/10 0.00000
+stage 4/∞ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 281/281 0:00:22 • 0:00:00 13.06it/s val_accuracy: 0.0 val_word_accuracy: 0.0  early_stopping: 4/10 0.00000
+stage 5/∞ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 281/281 0:00:22 • 0:00:00 12.93it/s val_accuracy: 0.0 val_word_accuracy: 0.0  early_stopping: 5/10 0.00000
+stage 6/∞ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 281/281 0:00:22 • 0:00:00 12.96it/s val_accuracy: 0.0 val_word_accuracy: 0.0  early_stopping: 6/10 0.00000
+stage 7/∞ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 281/281 0:00:22 • 0:00:00 13.04it/s val_accuracy: 0.0 val_word_accuracy: 0.0  early_stopping: 7/10 0.00000
+stage 8/∞ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 281/281 0:00:22 • 0:00:00 12.91it/s val_accuracy: 0.0 val_word_accuracy: 0.0  early_stopping: 8/10 0.00000
+stage 9/∞ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 281/281 0:00:22 • 0:00:00 12.94it/s val_accuracy: 0.0 val_word_accuracy: 0.0  early_stopping: 9/10 0.00000
+stage 10/∞ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 281/281 0:00:22 • 0:00:00 13.07it/s val_accuracy: 0.008 val_word_accuracy: 0.0  early_stopping: 0/10 0.00812
+stage 11/∞ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 281/281 0:00:22 • 0:00:00 12.92it/s val_accuracy: 0.12 val_word_accuracy: 0.0  early_stopping: 0/10 0.11981
+stage 12/∞ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 281/281 0:00:22 • 0:00:00 12.99it/s val_accuracy: 0.129 val_word_accuracy: 0.0  early_stopping: 0/10 0.12868
+stage 13/∞ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 281/281 0:00:22 • 0:00:00 12.93it/s val_accuracy: 0.136 val_word_accuracy: 0.0  early_stopping: 0/10 0.13635
+stage 14/∞ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 281/281 0:00:22 • 0:00:00 12.92it/s val_accuracy: 0.144 val_word_accuracy: 0.0  early_stopping: 0/10 0.14432
+stage 15/∞ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 281/281 0:00:22 • 0:00:00 13.00it/s val_accuracy: 0.151 val_word_accuracy: 0.0  early_stopping: 0/10 0.15063
+stage 16/∞ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 281/281 0:00:22 • 0:00:00 12.84it/s val_accuracy: 0.174 val_word_accuracy: 0.0  early_stopping: 0/10 0.17408
+stage 17/∞ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 281/281 0:00:22 • 0:00:00 12.88it/s val_accuracy: 0.186 val_word_accuracy: 0.0  early_stopping: 0/10 0.18596
+stage 18/∞ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 281/281 0:00:22 • 0:00:00 12.95it/s val_accuracy: 0.237 val_word_accuracy: 0.031  early_stopping: 0/10 0.23677
+stage 19/∞ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 281/281 0:00:22 • 0:00:00 12.94it/s val_accuracy: 0.248 val_word_accuracy: 0.046  early_stopping: 0/10 0.24835
+stage 20/∞ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 281/281 0:00:22 • 0:00:00 12.95it/s val_accuracy: 0.277 val_word_accuracy: 0.064  early_stopping: 0/10 0.27676
+stage 21/∞ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 281/281 0:00:22 • 0:00:00 12.85it/s val_accuracy: 0.278 val_word_accuracy: 0.053  early_stopping: 0/10 0.27841
+stage 22/∞ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 281/281 0:00:22 • 0:00:00 12.94it/s val_accuracy: 0.325 val_word_accuracy: 0.094  early_stopping: 0/10 0.32517
+stage 23/∞ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 281/281 0:00:22 • 0:00:00 13.00it/s val_accuracy: 0.352 val_word_accuracy: 0.112  early_stopping: 0/10 0.35192
+stage 24/∞ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 281/281 0:00:22 • 0:00:00 12.92it/s val_accuracy: 0.35 val_word_accuracy: 0.119  early_stopping: 1/10 0.35192
+stage 25/∞ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 281/281 0:00:22 • 0:00:00 12.89it/s val_accuracy: 0.392 val_word_accuracy: 0.148  early_stopping: 0/10 0.39221
+stage 26/∞ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 281/281 0:00:22 • 0:00:00 12.94it/s val_accuracy: 0.417 val_word_accuracy: 0.158  early_stopping: 0/10 0.41747
+stage 27/∞ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 281/281 0:00:22 • 0:00:00 12.99it/s val_accuracy: 0.448 val_word_accuracy: 0.17  early_stopping: 0/10 0.44814
+stage 28/∞ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 281/281 0:00:22 • 0:00:00 12.84it/s val_accuracy: 0.485 val_word_accuracy: 0.189  early_stopping: 0/10 0.48527
+stage 29/∞ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 281/281 0:00:22 • 0:00:00 12.93it/s val_accuracy: 0.522 val_word_accuracy: 0.21  early_stopping: 0/10 0.52195
+stage 30/∞ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 281/281 0:00:22 • 0:00:00 12.95it/s val_accuracy: 0.549 val_word_accuracy: 0.222  early_stopping: 0/10 0.54931
+stage 31/∞ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 281/281 0:00:22 • 0:00:00 12.97it/s val_accuracy: 0.617 val_word_accuracy: 0.248  early_stopping: 0/10 0.61666
+stage 32/∞ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 281/281 0:00:22 • 0:00:00 13.01it/s val_accuracy: 0.665 val_word_accuracy: 0.277  early_stopping: 0/10 0.66491
+stage 33/∞ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 281/281 0:00:22 • 0:00:00 12.78it/s val_accuracy: 0.712 val_word_accuracy: 0.309  early_stopping: 0/10 0.71182
+stage 34/∞ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 281/281 0:00:22 • 0:00:00 12.87it/s val_accuracy: 0.718 val_word_accuracy: 0.308  early_stopping: 0/10 0.71768
+stage 35/∞ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 281/281 0:00:22 • 0:00:00 12.93it/s val_accuracy: 0.751 val_word_accuracy: 0.344  early_stopping: 0/10 0.75120
+stage 36/∞ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 281/281 0:00:22 • 0:00:00 12.87it/s val_accuracy: 0.765 val_word_accuracy: 0.358  early_stopping: 0/10 0.76503
+stage 37/∞ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 281/281 0:00:22 • 0:00:00 13.07it/s val_accuracy: 0.784 val_word_accuracy: 0.362  early_stopping: 0/10 0.78443
+stage 38/∞ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 281/281 0:00:22 • 0:00:00 12.92it/s val_accuracy: 0.794 val_word_accuracy: 0.383  early_stopping: 0/10 0.79420
+stage 39/∞ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 281/281 0:00:22 • 0:00:00 12.87it/s val_accuracy: 0.805 val_word_accuracy: 0.389  early_stopping: 0/10 0.80472
+stage 40/∞ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 281/281 0:00:22 • 0:00:00 12.92it/s val_accuracy: 0.813 val_word_accuracy: 0.418  early_stopping: 0/10 0.81254
+stage 41/∞ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 281/281 0:00:22 • 0:00:00 12.77it/s val_accuracy: 0.821 val_word_accuracy: 0.426  early_stopping: 0/10 0.82051
+stage 42/∞ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 281/281 0:00:22 • 0:00:00 12.85it/s val_accuracy: 0.824 val_word_accuracy: 0.43  early_stopping: 0/10 0.82351
+stage 43/∞ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 281/281 0:00:22 • 0:00:00 12.91it/s val_accuracy: 0.834 val_word_accuracy: 0.451  early_stopping: 0/10 0.83449
+stage 44/∞ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 281/281 0:00:22 • 0:00:00 13.01it/s val_accuracy: 0.836 val_word_accuracy: 0.464  early_stopping: 0/10 0.83614
+stage 45/∞ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 281/281 0:00:22 • 0:00:00 12.95it/s val_accuracy: 0.843 val_word_accuracy: 0.477  early_stopping: 0/10 0.84290
+stage 46/∞ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 281/281 0:00:22 • 0:00:00 12.96it/s val_accuracy: 0.845 val_word_accuracy: 0.467  early_stopping: 0/10 0.84546
+stage 47/∞ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 281/281 0:00:22 • 0:00:00 13.00it/s val_accuracy: 0.851 val_word_accuracy: 0.481  early_stopping: 0/10 0.85117
+stage 48/∞ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 281/281 0:00:22 • 0:00:00 13.00it/s val_accuracy: 0.854 val_word_accuracy: 0.502  early_stopping: 0/10 0.85448
+stage 49/∞ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 281/281 0:00:22 • 0:00:00 13.03it/s val_accuracy: 0.858 val_word_accuracy: 0.495  early_stopping: 0/10 0.85794
+stage 50/∞ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 281/281 0:00:22 • 0:00:00 13.04it/s val_accuracy: 0.857 val_word_accuracy: 0.502  early_stopping: 1/10 0.85794
+stage 51/∞ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 281/281 0:00:22 • 0:00:00 12.96it/s val_accuracy: 0.872 val_word_accuracy: 0.526  early_stopping: 0/10 0.87162
+stage 52/∞ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 281/281 0:00:22 • 0:00:00 12.98it/s val_accuracy: 0.869 val_word_accuracy: 0.513  early_stopping: 1/10 0.87162
+stage 53/∞ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 281/281 0:00:22 • 0:00:00 12.98it/s val_accuracy: 0.871 val_word_accuracy: 0.525  early_stopping: 2/10 0.87162
+stage 54/∞ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 281/281 0:00:22 • 0:00:00 12.88it/s val_accuracy: 0.874 val_word_accuracy: 0.532  early_stopping: 0/10 0.87402
+stage 55/∞ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 281/281 0:00:22 • 0:00:00 13.01it/s val_accuracy: 0.876 val_word_accuracy: 0.538  early_stopping: 0/10 0.87628
+stage 56/∞ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 281/281 0:00:22 • 0:00:00 12.81it/s val_accuracy: 0.881 val_word_accuracy: 0.549  early_stopping: 0/10 0.88079
+stage 57/∞ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 281/281 0:00:22 • 0:00:00 12.98it/s val_accuracy: 0.879 val_word_accuracy: 0.536  early_stopping: 1/10 0.88079
+stage 58/∞ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 281/281 0:00:22 • 0:00:00 12.91it/s val_accuracy: 0.879 val_word_accuracy: 0.548  early_stopping: 2/10 0.88079
+stage 59/∞ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 281/281 0:00:22 • 0:00:00 13.06it/s val_accuracy: 0.885 val_word_accuracy: 0.564  early_stopping: 0/10 0.88485
+stage 60/∞ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 281/281 0:00:22 • 0:00:00 12.94it/s val_accuracy: 0.885 val_word_accuracy: 0.567  early_stopping: 0/10 0.88500
+stage 61/∞ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 281/281 0:00:22 • 0:00:00 12.99it/s val_accuracy: 0.886 val_word_accuracy: 0.559  early_stopping: 0/10 0.88575
+stage 62/∞ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 281/281 0:00:22 • 0:00:00 13.05it/s val_accuracy: 0.888 val_word_accuracy: 0.569  early_stopping: 0/10 0.88755
+stage 63/∞ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 281/281 0:00:22 • 0:00:00 13.00it/s val_accuracy: 0.89 val_word_accuracy: 0.571  early_stopping: 0/10 0.89011
+stage 64/∞ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 281/281 0:00:22 • 0:00:00 13.09it/s val_accuracy: 0.888 val_word_accuracy: 0.571  early_stopping: 1/10 0.89011
+stage 65/∞ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 281/281 0:00:22 • 0:00:00 12.94it/s val_accuracy: 0.892 val_word_accuracy: 0.58  early_stopping: 0/10 0.89206
+stage 66/∞ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 281/281 0:00:22 • 0:00:00 12.96it/s val_accuracy: 0.892 val_word_accuracy: 0.581  early_stopping: 0/10 0.89221
+stage 67/∞ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 281/281 0:00:22 • 0:00:00 13.02it/s val_accuracy: 0.894 val_word_accuracy: 0.594  early_stopping: 0/10 0.89387
+stage 68/∞ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 281/281 0:00:22 • 0:00:00 13.00it/s val_accuracy: 0.895 val_word_accuracy: 0.585  early_stopping: 0/10 0.89507
+stage 69/∞ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 281/281 0:00:22 • 0:00:00 12.95it/s val_accuracy: 0.897 val_word_accuracy: 0.592  early_stopping: 0/10 0.89657
+stage 70/∞ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 281/281 0:00:22 • 0:00:00 13.02it/s val_accuracy: 0.897 val_word_accuracy: 0.598  early_stopping: 0/10 0.89747
+stage 71/∞ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 281/281 0:00:22 • 0:00:00 12.95it/s val_accuracy: 0.896 val_word_accuracy: 0.595  early_stopping: 1/10 0.89747
+stage 72/∞ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 281/281 0:00:22 • 0:00:00 13.08it/s val_accuracy: 0.898 val_word_accuracy: 0.588  early_stopping: 0/10 0.89823
+stage 73/∞ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 281/281 0:00:22 • 0:00:00 12.79it/s val_accuracy: 0.895 val_word_accuracy: 0.603  early_stopping: 1/10 0.89823
+stage 74/∞ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 281/281 0:00:22 • 0:00:00 13.02it/s val_accuracy: 0.898 val_word_accuracy: 0.6  early_stopping: 2/10 0.89823
+stage 75/∞ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 281/281 0:00:22 • 0:00:00 13.02it/s val_accuracy: 0.897 val_word_accuracy: 0.6  early_stopping: 3/10 0.89823
+stage 76/∞ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 281/281 0:00:22 • 0:00:00 13.03it/s val_accuracy: 0.902 val_word_accuracy: 0.608  early_stopping: 0/10 0.90183
+stage 77/∞ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 281/281 0:00:22 • 0:00:00 13.04it/s val_accuracy: 0.895 val_word_accuracy: 0.592  early_stopping: 1/10 0.90183
+stage 78/∞ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 281/281 0:00:22 • 0:00:00 12.95it/s val_accuracy: 0.903 val_word_accuracy: 0.601  early_stopping: 0/10 0.90274
+stage 79/∞ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 281/281 0:00:22 • 0:00:00 12.75it/s val_accuracy: 0.904 val_word_accuracy: 0.611  early_stopping: 0/10 0.90424
+stage 80/∞ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 281/281 0:00:22 • 0:00:00 13.01it/s val_accuracy: 0.902 val_word_accuracy: 0.607  early_stopping: 1/10 0.90424
+stage 81/∞ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 281/281 0:00:22 • 0:00:00 13.02it/s val_accuracy: 0.902 val_word_accuracy: 0.607  early_stopping: 2/10 0.90424
+stage 82/∞ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 281/281 0:00:22 • 0:00:00 12.95it/s val_accuracy: 0.903 val_word_accuracy: 0.61  early_stopping: 3/10 0.90424
+stage 83/∞ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 281/281 0:00:22 • 0:00:00 12.98it/s val_accuracy: 0.905 val_word_accuracy: 0.616  early_stopping: 0/10 0.90529
+stage 84/∞ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 281/281 0:00:22 • 0:00:00 12.99it/s val_accuracy: 0.902 val_word_accuracy: 0.605  early_stopping: 1/10 0.90529
+stage 85/∞ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 281/281 0:00:22 • 0:00:00 12.93it/s val_accuracy: 0.904 val_word_accuracy: 0.613  early_stopping: 2/10 0.90529
+stage 86/∞ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 281/281 0:00:22 • 0:00:00 12.95it/s val_accuracy: 0.905 val_word_accuracy: 0.623  early_stopping: 3/10 0.90529
+stage 87/∞ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 281/281 0:00:22 • 0:00:00 12.93it/s val_accuracy: 0.902 val_word_accuracy: 0.606  early_stopping: 4/10 0.90529
+stage 88/∞ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 281/281 0:00:22 • 0:00:00 13.01it/s val_accuracy: 0.903 val_word_accuracy: 0.62  early_stopping: 5/10 0.90529
+stage 89/∞ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 281/281 0:00:22 • 0:00:00 13.05it/s val_accuracy: 0.907 val_word_accuracy: 0.617  early_stopping: 0/10 0.90710
+stage 90/∞ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 281/281 0:00:22 • 0:00:00 13.03it/s val_accuracy: 0.907 val_word_accuracy: 0.623  early_stopping: 1/10 0.90710
+stage 91/∞ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 281/281 0:00:22 • 0:00:00 12.95it/s val_accuracy: 0.905 val_word_accuracy: 0.628  early_stopping: 2/10 0.90710
+stage 92/∞ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 281/281 0:00:22 • 0:00:00 13.08it/s val_accuracy: 0.909 val_word_accuracy: 0.62  early_stopping: 0/10 0.90875
+stage 93/∞ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 281/281 0:00:22 • 0:00:00 12.93it/s val_accuracy: 0.908 val_word_accuracy: 0.632  early_stopping: 1/10 0.90875
+stage 94/∞ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 281/281 0:00:22 • 0:00:00 12.93it/s val_accuracy: 0.91 val_word_accuracy: 0.629  early_stopping: 0/10 0.90965
+stage 95/∞ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 281/281 0:00:22 • 0:00:00 13.08it/s val_accuracy: 0.91 val_word_accuracy: 0.637  early_stopping: 0/10 0.90980
+stage 96/∞ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 281/281 0:00:23 • 0:00:00 12.67it/s val_accuracy: 0.91 val_word_accuracy: 0.625  early_stopping: 0/10 0.91040
+stage 97/∞ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 281/281 0:00:22 • 0:00:00 12.95it/s val_accuracy: 0.908 val_word_accuracy: 0.626  early_stopping: 1/10 0.91040
+stage 98/∞ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 281/281 0:00:22 • 0:00:00 13.01it/s val_accuracy: 0.91 val_word_accuracy: 0.632  early_stopping: 2/10 0.91040
+stage 99/∞ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 281/281 0:00:22 • 0:00:00 13.00it/s val_accuracy: 0.91 val_word_accuracy: 0.632  early_stopping: 3/10 0.91040
+stage 100/∞ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 281/281 0:00:22 • 0:00:00 13.04it/s val_accuracy: 0.912 val_word_accuracy: 0.639  early_stopping: 0/10 0.91161
+stage 101/∞ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 281/281 0:00:22 • 0:00:00 12.97it/s val_accuracy: 0.912 val_word_accuracy: 0.643  early_stopping: 0/10 0.91191
+stage 102/∞ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 281/281 0:00:22 • 0:00:00 12.91it/s val_accuracy: 0.911 val_word_accuracy: 0.629  early_stopping: 1/10 0.91191
+stage 103/∞ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 281/281 0:00:22 • 0:00:00 12.99it/s val_accuracy: 0.911 val_word_accuracy: 0.639  early_stopping: 2/10 0.91191
+stage 104/∞ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 281/281 0:00:22 • 0:00:00 12.94it/s val_accuracy: 0.912 val_word_accuracy: 0.631  early_stopping: 0/10 0.91221
+stage 105/∞ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 281/281 0:00:22 • 0:00:00 12.99it/s val_accuracy: 0.911 val_word_accuracy: 0.641  early_stopping: 1/10 0.91221
+stage 106/∞ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 281/281 0:00:22 • 0:00:00 13.03it/s val_accuracy: 0.916 val_word_accuracy: 0.65  early_stopping: 0/10 0.91627
+stage 107/∞ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 281/281 0:00:22 • 0:00:00 12.91it/s val_accuracy: 0.916 val_word_accuracy: 0.652  early_stopping: 1/10 0.91627
+stage 108/∞ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 281/281 0:00:22 • 0:00:00 12.99it/s val_accuracy: 0.913 val_word_accuracy: 0.639  early_stopping: 2/10 0.91627
+stage 109/∞ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 281/281 0:00:22 • 0:00:00 13.01it/s val_accuracy: 0.914 val_word_accuracy: 0.638  early_stopping: 3/10 0.91627
+stage 110/∞ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 281/281 0:00:22 • 0:00:00 12.99it/s val_accuracy: 0.915 val_word_accuracy: 0.649  early_stopping: 4/10 0.91627
+stage 111/∞ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 281/281 0:00:22 • 0:00:00 12.76it/s val_accuracy: 0.916 val_word_accuracy: 0.652  early_stopping: 5/10 0.91627
+stage 112/∞ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 281/281 0:00:22 • 0:00:00 13.01it/s val_accuracy: 0.917 val_word_accuracy: 0.648  early_stopping: 0/10 0.91687
+stage 113/∞ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 281/281 0:00:22 • 0:00:00 12.98it/s val_accuracy: 0.919 val_word_accuracy: 0.644  early_stopping: 0/10 0.91882
+stage 114/∞ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 281/281 0:00:22 • 0:00:00 12.93it/s val_accuracy: 0.916 val_word_accuracy: 0.649  early_stopping: 1/10 0.91882
+stage 115/∞ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 281/281 0:00:22 • 0:00:00 12.93it/s val_accuracy: 0.914 val_word_accuracy: 0.637  early_stopping: 2/10 0.91882
+stage 116/∞ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 281/281 0:00:22 • 0:00:00 12.86it/s val_accuracy: 0.914 val_word_accuracy: 0.654  early_stopping: 3/10 0.91882
+stage 117/∞ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 281/281 0:00:22 • 0:00:00 12.92it/s val_accuracy: 0.92 val_word_accuracy: 0.657  early_stopping: 0/10 0.91957
+stage 118/∞ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 281/281 0:00:22 • 0:00:00 12.89it/s val_accuracy: 0.917 val_word_accuracy: 0.647  early_stopping: 1/10 0.91957
+stage 119/∞ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 281/281 0:00:22 • 0:00:00 12.95it/s val_accuracy: 0.916 val_word_accuracy: 0.648  early_stopping: 2/10 0.91957
+stage 120/∞ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 281/281 0:00:22 • 0:00:00 12.92it/s val_accuracy: 0.919 val_word_accuracy: 0.663  early_stopping: 3/10 0.91957
+stage 121/∞ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 281/281 0:00:22 • 0:00:00 12.96it/s val_accuracy: 0.918 val_word_accuracy: 0.663  early_stopping: 4/10 0.91957
+stage 122/∞ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 281/281 0:00:22 • 0:00:00 12.90it/s val_accuracy: 0.918 val_word_accuracy: 0.652  early_stopping: 5/10 0.91957
+stage 123/∞ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 281/281 0:00:22 • 0:00:00 13.07it/s val_accuracy: 0.914 val_word_accuracy: 0.646  early_stopping: 6/10 0.91957
+stage 124/∞ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 281/281 0:00:22 • 0:00:00 12.83it/s val_accuracy: 0.919 val_word_accuracy: 0.668  early_stopping: 7/10 0.91957
+stage 125/∞ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 281/281 0:00:22 • 0:00:00 13.01it/s val_accuracy: 0.919 val_word_accuracy: 0.662  early_stopping: 8/10 0.91957
+stage 126/∞ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 281/281 0:00:22 • 0:00:00 13.02it/s val_accuracy: 0.918 val_word_accuracy: 0.665  early_stopping: 9/10 0.91957
+stage 127/∞ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 281/281 0:00:22 • 0:00:00 13.01it/s val_accuracy: 0.919 val_word_accuracy: 0.659  early_stopping: 10/10 0.91957
+Moving best model /home/ROCQ/almanach/achague/peraire/peraire-ground-truth/scratch/peraire_D_scratch_117.mlmodel (0.9195730686187744) to /home/ROCQ/almanach/achague/peraire/peraire-ground-truth/scratch/peraire_D_scratch_best.mlmodel
