@@ -1,0 +1,46 @@
+┏━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃    ┃ Name      ┃ Type                     ┃ Params ┃                 In sizes ┃                Out sizes ┃
+┡━━━━╇━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ 0  │ val_cer   │ _CharErrorRate           │      0 │                        ? │                        ? │
+│ 1  │ val_wer   │ _WordErrorRate           │      0 │                        ? │                        ? │
+│ 2  │ net       │ MultiParamSequential     │  4.0 M │  [[1, 1, 120, 400], '?'] │   [[1, 102, 1, 50], '?'] │
+│ 3  │ net.C_0   │ ActConv2D                │  1.3 K │  [[1, 1, 120, 400], '?'] │ [[1, 32, 120, 400], '?'] │
+│ 4  │ net.Do_1  │ Dropout                  │      0 │ [[1, 32, 120, 400], '?'] │ [[1, 32, 120, 400], '?'] │
+│ 5  │ net.Mp_2  │ MaxPool                  │      0 │ [[1, 32, 120, 400], '?'] │  [[1, 32, 60, 200], '?'] │
+│ 6  │ net.C_3   │ ActConv2D                │ 40.0 K │  [[1, 32, 60, 200], '?'] │  [[1, 32, 60, 200], '?'] │
+│ 7  │ net.Do_4  │ Dropout                  │      0 │  [[1, 32, 60, 200], '?'] │  [[1, 32, 60, 200], '?'] │
+│ 8  │ net.Mp_5  │ MaxPool                  │      0 │  [[1, 32, 60, 200], '?'] │  [[1, 32, 30, 100], '?'] │
+│ 9  │ net.C_6   │ ActConv2D                │ 55.4 K │  [[1, 32, 30, 100], '?'] │  [[1, 64, 30, 100], '?'] │
+│ 10 │ net.Do_7  │ Dropout                  │      0 │  [[1, 64, 30, 100], '?'] │  [[1, 64, 30, 100], '?'] │
+│ 11 │ net.Mp_8  │ MaxPool                  │      0 │  [[1, 64, 30, 100], '?'] │   [[1, 64, 15, 50], '?'] │
+│ 12 │ net.C_9   │ ActConv2D                │  110 K │   [[1, 64, 15, 50], '?'] │   [[1, 64, 15, 50], '?'] │
+│ 13 │ net.Do_10 │ Dropout                  │      0 │   [[1, 64, 15, 50], '?'] │   [[1, 64, 15, 50], '?'] │
+│ 14 │ net.S_11  │ Reshape                  │      0 │   [[1, 64, 15, 50], '?'] │   [[1, 960, 1, 50], '?'] │
+│ 15 │ net.L_12  │ TransposedSummarizingRNN │  1.9 M │   [[1, 960, 1, 50], '?'] │   [[1, 400, 1, 50], '?'] │
+│ 16 │ net.Do_13 │ Dropout                  │      0 │   [[1, 400, 1, 50], '?'] │   [[1, 400, 1, 50], '?'] │
+│ 17 │ net.L_14  │ TransposedSummarizingRNN │  963 K │   [[1, 400, 1, 50], '?'] │   [[1, 400, 1, 50], '?'] │
+│ 18 │ net.Do_15 │ Dropout                  │      0 │   [[1, 400, 1, 50], '?'] │   [[1, 400, 1, 50], '?'] │
+│ 19 │ net.L_16  │ TransposedSummarizingRNN │  963 K │   [[1, 400, 1, 50], '?'] │   [[1, 400, 1, 50], '?'] │
+│ 20 │ net.Do_17 │ Dropout                  │      0 │   [[1, 400, 1, 50], '?'] │   [[1, 400, 1, 50], '?'] │
+│ 21 │ net.O_18  │ LinSoftmax               │ 40.9 K │   [[1, 400, 1, 50], '?'] │   [[1, 102, 1, 50], '?'] │
+└────┴───────────┴──────────────────────────┴────────┴──────────────────────────┴──────────────────────────┘
+Trainable params: 4.0 M                                                                                                                                                                                                                                                                    
+Non-trainable params: 0                                                                                                                                                                                                                                                                    
+Total params: 4.0 M                                                                                                                                                                                                                                                                        
+Total estimated model params size (MB): 16                                                                                                                                                                                                                                                 
+stage 0/∞ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 231/231 0:00:14 • 0:00:00 17.04it/s val_accuracy: 0.0 val_word_accuracy: 0.0  early_stopping: 0/10 0.00000
+stage 1/∞ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 231/231 0:00:14 • 0:00:00 16.79it/s val_accuracy: 0.0 val_word_accuracy: 0.0  early_stopping: 1/10 0.00000
+stage 2/∞ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 231/231 0:00:14 • 0:00:00 17.05it/s val_accuracy: 0.0 val_word_accuracy: 0.0  early_stopping: 2/10 0.00000
+stage 3/∞ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 231/231 0:00:14 • 0:00:00 16.94it/s val_accuracy: 0.0 val_word_accuracy: 0.0  early_stopping: 3/10 0.00000
+stage 4/∞ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 231/231 0:00:14 • 0:00:00 17.14it/s val_accuracy: 0.0 val_word_accuracy: 0.0  early_stopping: 4/10 0.00000
+stage 5/∞ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 231/231 0:00:14 • 0:00:00 17.09it/s val_accuracy: 0.0 val_word_accuracy: 0.0  early_stopping: 5/10 0.00000
+stage 6/∞ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 231/231 0:00:14 • 0:00:00 17.00it/s val_accuracy: 0.0 val_word_accuracy: 0.0  early_stopping: 6/10 0.00000
+stage 7/∞ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 231/231 0:00:13 • 0:00:00 17.25it/s val_accuracy: 0.0 val_word_accuracy: 0.0  early_stopping: 7/10 0.00000
+stage 8/∞ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 231/231 0:00:14 • 0:00:00 16.89it/s val_accuracy: 0.0 val_word_accuracy: 0.0  early_stopping: 8/10 0.00000
+stage 9/∞ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 231/231 0:00:14 • 0:00:00 17.19it/s val_accuracy: 0.0 val_word_accuracy: 0.0  early_stopping: 9/10 0.00000
+stage 10/∞ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 231/231 0:00:14 • 0:00:00 16.96it/s val_accuracy: 0.0 val_word_accuracy: 0.0  early_stopping: 10/10 0.00000
+stage 11/∞ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 231/231 0:00:14 • 0:00:00 17.05it/s val_accuracy: 0.0 val_word_accuracy: 0.0  early_stopping: 11/10 0.00000
+stage 12/∞ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 231/231 0:00:14 • 0:00:00 16.94it/s val_accuracy: 0.0 val_word_accuracy: 0.0  early_stopping: 12/10 0.00000
+stage 13/∞ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 231/231 0:00:14 • 0:00:00 17.12it/s val_accuracy: 0.0 val_word_accuracy: 0.0  early_stopping: 13/10 0.00000
+stage 14/∞ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 231/231 0:00:14 • 0:00:00 16.93it/s val_accuracy: 0.0 val_word_accuracy: 0.0  early_stopping: 14/10 0.00000
+Moving best model /home/ROCQ/almanach/achague/peraire/peraire-ground-truth/scratch/peraire_B_scratch_0.mlmodel (0.044117629528045654) to /home/ROCQ/almanach/achague/peraire/peraire-ground-truth/scratch/peraire_B_scratch_best.mlmodel
